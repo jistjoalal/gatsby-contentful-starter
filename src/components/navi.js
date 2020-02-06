@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import Nav from 'react-bootstrap/Nav'
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Nav from "react-bootstrap/Nav";
 
 export default class Navi extends React.Component {
   render() {
-    const { siteTitle, ...rest } = this.props
+    const { siteTitle, ...rest } = this.props;
     return (
       <Nav className="container" {...rest}>
         <NavDropdown title={`Dropdown`}>
@@ -24,6 +24,6 @@ export default class Navi extends React.Component {
           Blog
         </Nav.Link>
       </Nav>
-    )
+    );
   }
 }

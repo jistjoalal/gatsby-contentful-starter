@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-import get from 'lodash/get'
+import React from "react";
+import { Link, graphql, StaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+import get from "lodash/get";
 
-import Navbar from 'react-bootstrap/Navbar'
+import Navbar from "react-bootstrap/Navbar";
 
-import Navi from './navi'
+import Navi from "./navi";
 
 class Header extends React.Component {
   render() {
-    const { siteTitle } = this.props
-    const banner = get(this, 'props.data.banner.childImageSharp.fluid')
-    const logo = '/media/logo.gif'
+    const { siteTitle } = this.props;
+    const banner = get(this, "props.data.banner.childImageSharp.fluid");
+    const logo = "/media/logo.png";
     return (
       <BackgroundImage alt="banner" fluid={banner} preserveStackingContext>
         <Navbar
@@ -19,8 +19,8 @@ class Header extends React.Component {
           expand="lg"
           className="semi-transparent"
           style={{
-            minHeight: '5rem',
-            padding: '1.4rem',
+            minHeight: "5rem",
+            padding: "1.4rem"
           }}
         >
           <Navbar.Brand>
@@ -29,10 +29,10 @@ class Header extends React.Component {
                 src={logo}
                 alt="logo"
                 style={{
-                  width: '200px',
-                  marginTop: '.5rem',
-                  marginBottom: '-.75rem',
-                  marginLeft: '1rem',
+                  width: "200px",
+                  marginTop: ".5rem",
+                  marginBottom: "-.75rem",
+                  marginLeft: "1rem"
                 }}
               />
             </Link>
@@ -44,10 +44,10 @@ class Header extends React.Component {
         </Navbar>
         <div
           className="more-transparent"
-          style={{ height: '1rem', marginBottom: '1rem' }}
+          style={{ height: "1rem", marginBottom: "1rem" }}
         />
       </BackgroundImage>
-    )
+    );
   }
 }
 
@@ -66,4 +66,4 @@ export default props => (
     `}
     render={data => <Header data={data} {...props} />}
   />
-)
+);
