@@ -1,0 +1,15 @@
+@import './gatstrap.scss';
+
+// Banner effect
+.semi-transparent {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.more-transparent {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+// mobile media queries
+@media (max-width: 800px) {
+  // media queries here
+}

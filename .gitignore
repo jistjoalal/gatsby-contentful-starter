@@ -1,0 +1,9 @@
+# deps
+node_modules/
+
+# build
+public
+.cache
+
+# secrets
+.env
